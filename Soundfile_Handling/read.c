@@ -1,16 +1,16 @@
 #include<stdio.h>
 #include<stdlib.h>
-#include "./include/portsf.h"
+#include "../include/portsf.h"
 
 int check_sampletype(psf_stype type);
 
-int main(int argc, char **argv)
+int main()
 {
-	PSF_PROPS props;
 	int sf;
-	psf_init();
-
+	PSF_PROPS props;
 	sf = psf_sndOpen("sample.wav", &props, 0);
+
+	psf_init();
 	
 	if(sf < 0){
 		printf("Error: unable to open soundfile\n");

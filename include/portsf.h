@@ -117,12 +117,27 @@ typedef struct psf_chpeak {
 /* second two are speculative at present! */
 typedef enum  {PSF_CREATE_RDWR,PSF_CREATE_TEMPORARY,PSF_CREATE_WRONLY} psf_create_mode;
 /* the speakerfeed format */
-/* MC_WAVE_EX is a possibly temporary one to cover abstruse infile formats! */
-typedef enum { STDWAVE,MC_STD,MC_MONO,MC_STEREO,MC_QUAD,MC_LCRS,MC_BFMT,MC_DOLBY_5_1,MC_SURR_5_0,MC_SURR_7_1,MC_WAVE_EX } psf_channelformat;
 
+/* MC_WAVE_EX is a possibly temporary one to cover abstruse infile formats! */
+typedef enum { 
+	STDWAVE,
+	MC_STD,
+	MC_MONO,
+	MC_STEREO,
+	MC_QUAD,
+	MC_LCRS,
+	MC_BFMT,
+	MC_DOLBY_5_1,
+	MC_SURR_5_0,
+	MC_SURR_7_1,
+	MC_WAVE_EX 
+} psf_channelformat;
 /* read access support */
 /* for psf_sndSeek(); ~should~ map directly to fseek mode flags*/
-enum { PSF_SEEK_SET=0,PSF_SEEK_CUR,PSF_SEEK_END};
+enum { 
+	PSF_SEEK_SET=0,
+	PSF_SEEK_CUR,
+	PSF_SEEK_END};
 
 enum {PSF_DITHER_OFF,PSF_DITHER_TPDF};
 
